@@ -1,0 +1,22 @@
+Drucker:
+    Drucker1: 192.168.1.146
+    Drucker2: 192.168.1.150
+
+Hosts:
+    TCP:
+        Computer1: 192.168.1.146
+        Computer2: 192.168.1.150
+    shares:
+        Share: \\remotehost\logomed
+
+LaborGeräte:
+    Gerät1: 192.168.1.150
+
+Zahlungssysteme:
+    Hobex1: 192.168.1.151
+
+Ecard-router:
+    router1: 192.168.1.146
+
+Ecard-Kartenleser:
+    gins1: 10.1.1.100
