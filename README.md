@@ -19,6 +19,17 @@ Füge Regeln zu den Lokalen Intranet Sites hinzu
 $ipAddress = "192.168.100.11"
 $zone = 1  # 1 steht für "Lokales Intranet"
 
-# Hinzufügen der IP-Adresse zur lokalen Intranet-Zone
-Add-Content -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\$zone" -Value "$ipAddress=2"
+$KeyPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges\"  
+$ValueName = "$zone"
+$ValueData = "$ipAddress"  
+try{  
+    Get-ItemProperty -Path $KeyPath -Name $valueName -ErrorAction Stop  
+}  
+catch [System.Management.Automation.ItemNotFoundException] {  
+    New-Item -Path $KeyPath -Force
+    New-ItemProperty -Path $KeyPath -Name $ValueName -Value $ValueData -Force
+}  
+catch {  
+    New-ItemProperty -Path $KeyPath -Name $ValueName -Value $ValueData -Type String -Force
+}  
 ```
