@@ -1,5 +1,12 @@
 # lMLDSupportTools
 
+# Usefull Urls
+```
+# https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/intranet-site-identified-as-an-internet-site
+# https://stackoverflow.com/questions/68799849/add-trusted-file-share-to-internet-explorer
+# https://gist.github.com/altrive/9319551 --> example for PS1 Script Adding Iexplore Settings
+# https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.InternetExplorer::IZ_PolicyInternetZoneTemplate
+```
 ## TODO's
 Auslesen von installierter Software "explusive" Microsoft 
 Integration dieses Powershell befehls in das check/Monitor Script 
